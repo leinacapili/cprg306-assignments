@@ -2,9 +2,9 @@
 
 import Item from "./item";
 import React, { useState } from "react";
-import items from "./items.json";
+// import items from "./items.json";
 
-const ItemList = () => {
+const ItemList = ({ items }) => {
     const [sortBy, setSortBy] = useState('name');
 
     const sortedItems = [...items].sort((a, b) => {
@@ -19,7 +19,7 @@ const ItemList = () => {
     return (
         <div>
             <div>
-                <label for="sort">Sort  by: </label>
+                <label for="sort">Sort by: </label>
                 <button class="bg-orange-700 p-1 m-2 w-28" onClick={() => setSortBy('name')}>Name</button>
                 <button class="bg-orange-700 p-1 m-2 w-28" onClick={() => setSortBy('category')}>Category</button>
             </div>
