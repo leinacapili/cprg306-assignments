@@ -2,7 +2,6 @@
 
 import Item from "./item";
 import React, { useState } from "react";
-// import items from "./items.json";
 
 const ItemList = ({ items }) => {
     const [sortBy, setSortBy] = useState('name');
